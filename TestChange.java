@@ -2,8 +2,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /*
- * Courtney Yovich
- * April 13, 2018
+ * Courtney Yovich and Tyler Fleetwood
+ * April 23, 2018
  * JUnit tests for class Coins 
  * Testing the Minimum Coin Change Problem
  */

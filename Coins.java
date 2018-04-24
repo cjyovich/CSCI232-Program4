@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 /*
- * Courtney Yovich
- * April 13, 2018
+ * Courtney Yovich and Tyler Fleetwood 
+ * April 23, 2018
  * Class to implement greedy algorithm
  * Minimum Coin Change Problem
  */
@@ -21,6 +21,12 @@ public class Coins {
 		if (arr.length == 0) { //case: no coins? throw exception
 			throw new IllegalArgumentException("Array of size zero is not allowed");
 		}
+		for( int i = 0; i < arr.length; i++){
+			if (arr[i] <= 0){
+				throw new IllegalArgumentException("No negative currency allowed in here my friend");
+			}
+		}
+		
 		for (int i = 1; i <= amt; i++) { //initialize array with some stuff!
 			numCoins[i] = Integer.MAX_VALUE;
 		}
@@ -29,7 +35,11 @@ public class Coins {
 			for (int j = 0; j < arr.length; j++) { //iterates through coin denominations
 				if (arr[j] <= i && 1 + numCoins[i - arr[j]] < numCoins[i]) {
 					numCoins[i] = 1 + numCoins[i - arr[j]];
-					coinsUsed[i] = arr[j]; //stores the coin amount
+					if (numCoins[i] < 0){
+						coinsUsed[i] = 0;
+					} else{
+						coinsUsed[i] = arr[j]; //stores the coin amount
+					}
 				}
 			}
 		}
@@ -49,4 +59,3 @@ public class Coins {
 	}
 
 }
-
