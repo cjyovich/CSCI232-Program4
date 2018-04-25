@@ -37,6 +37,13 @@ public class TestChange {
 		int empty[] = {};
 		coins.minCoins(empty, 0);
 	}
+
+	@Test(expected = IllegalArgumentException.class) //amount is less than smallest coin
+	public void testWeirdCoinAmount() {
+		Coins coins = new Coins();
+		int arr[] = {3, 7, 12, 15};
+		coins.minCoins(arr, 2);
+	}
 	
 	@Test
 	public void testMinCoins() { //this one fails, because it can't get to zero?? unsure
