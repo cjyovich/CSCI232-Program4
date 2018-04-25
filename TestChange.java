@@ -46,7 +46,7 @@ public class TestChange {
 	}
 	
 	@Test
-	public void testMinCoins() { //this one fails, because it can't get to zero?? unsure
+	public void testMinCoins() { //odd amount with no 1 denomination of coin
 		Coins coins = new Coins();
 		int arr[] = {3, 7, 12, 15};
 		assertArrayEquals(new int[] {7, 12}, coins.minCoins(arr, 19));
