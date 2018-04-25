@@ -38,10 +38,10 @@ public class TestChange {
 		coins.minCoins(empty, 0);
 	}
 	
-//	@Test
-//	public void testMinCoins() { //this one fails, because it can't get to zero?? unsure
-//		Coins coins = new Coins();
-//		int arr[] = {3, 7, 12, 15};
-//		assertArrayEquals(new int[] {7, 12}, coins.minCoins(arr, 19));
-//	}
+	@Test
+	public void testMinCoins() { //this one fails, because it can't get to zero?? unsure
+		Coins coins = new Coins();
+		int arr[] = {3, 7, 12, 15};
+		assertArrayEquals(new int[] {7, 12}, coins.minCoins(arr, 19));
+	}
 }
