@@ -33,7 +33,7 @@ public class Coins {
 		if (possibleCoins.length == 0) { //case: no coins? throw exception
 			throw new IllegalArgumentException("Array of size zero is not allowed");
 		}
-		if (amt < arr[0]) {
+		if (amt < possibleCoins[0]) {
 			throw new IllegalArgumentException("Cannot make change for an amount smaller than the smallest coin");
 		}
 		for( int i = 0; i < possibleCoins.length; i++){
